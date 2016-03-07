@@ -1,0 +1,5 @@
+Beautifulsoup4, python library: tarball is in the folder.
+$ sudo pip install beautifulsoup4
+
+Nltk, python library
+$ sudo pip install -U nltk

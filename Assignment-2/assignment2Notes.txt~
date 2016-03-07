@@ -1,0 +1,32 @@
+
+
+Tf ve idf hesapları 5. slay sayfa 8-12 arasında var. Tf-idf vektöründen cos similarity 5. slaytta.
+
+
+Spam ve non-spam birlikte olduğu bi dictionary olacak.
+
+Bütün training data için teker teker Tf ve idf hesaplanıyor, bunların çarpımı tf-idf'i veriyor.
+
+Her mail için dictionary uzunluğunda vector yapıyorsun. Bu vektör o maildeki kelimelerin tf-idf'lerini içeriyor.
+
+Sonra test datası okunduğunda onun içinden dictionary büyüklüğünde tf-idf vectorü çıkarıyorsun. Vocabularity uzunluğunda vectorler.
+
+Test vectörü ile trainingteki tüm vektörler arasında cos similarity yapıyorsun.
+
+KNN 3 dendiğinde cos similarty en büyük olan 3 training alıyorsun.
+
+Bu 3 içinde kaç tane spam kaç tane non-spam olduğuna bakıyorsun ve çoğunluk neyse bu odur diyorsun.
+
+Rocca metodu; spam vektörlerinin ortalamasını ve non-spam vektörlerinin ortalamasını alıyorsun. Test vektörünü bu iki yeni vektörle cos similarty yapıyorsun. Hangisi büyükse odur diyorsun.
+
+
+
+presicition recall fmajor (e): 240 spami test olarak alıyorum. Bunların spam olduğunu biliyorum ama kaç tanesini bulduğuna bakıyorum. True pozitif bu. 240 non-spam için aynısını yapıyorum. Kaç tane spam varsa False pozitif bu da.240 - True Pozitif = False Negatif
+240 - False Pozifif = True Negatif
+
+tf(t,d) => number of times that t occurs in d  ////   df(t) => document frequenct of t, number of documents that contain t
+
+
+Precision = (TP / (TP + FP))
+Recall = (TP / (TP + FN))
+F-Measure = (2 * (Precision * Recall) / (Precision + Recall))

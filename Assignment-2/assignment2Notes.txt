@@ -1,0 +1,6 @@
+tf(t,d) => number of times that t occurs in d  ////   df(t) => document frequenct of t, number of documents that contain t
+
+
+Precision = (TP / (TP + FP))
+Recall = (TP / (TP + FN))
+F-Measure = (2 * (Precision * Recall) / (Precision + Recall))
